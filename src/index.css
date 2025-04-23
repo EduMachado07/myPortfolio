@@ -119,12 +119,13 @@
   }
 }
 
-.bg-colorPrimary {
-  
-}
+/* CORES CUSTOMIZADAS */
 .bg-colorBack {
-  background: #f1f1f1;
+  background: #F5F7FA;
 }
-.bg-colorPrimary {
-
+.border-colorBorder {
+  border-color: #1a1a1a;
+}
+.text-colorPrimary {
+  color: #0077FF;
 }
