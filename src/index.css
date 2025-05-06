@@ -120,12 +120,33 @@
 }
 
 /* CORES CUSTOMIZADAS */
-.bg-colorBack {
-  background: #F5F7FA;
+.bg-card-light {
+  background: #f5f7fa;
+}
+.bg-back-light {
+  background: #dfe4ea;
+
+  /* mais claro */
+  /* background: #e9edf2; */
+  /* mais escuro */
+  /* background: #d3d9e1; */
+}
+.bg-back-dark {
+  background: #222;
+  /* background: #2a2a2a; */
+}
+.bg-card-dark {
+  background: #1a1a1a;
 }
 .border-colorBorder {
   border-color: #1a1a1a;
 }
-.text-colorPrimary {
-  color: #0077FF;
+.text-primary {
+  color: #005fcc;
 }
+.bg-primary {
+  background-color: #005fcc;
+}
+/* .bg-primary {
+  background-color: #0077ff;
+} */

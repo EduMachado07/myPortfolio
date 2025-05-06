@@ -1,14 +1,4 @@
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -20,8 +10,8 @@ import {
 function Navbar() {
   return (
     <main>
-      <section className="w-full flex justify-between py-3 md:px-20 px-8">
-        <div className="w-12 h-12 bg-red-500">
+      <section className="w-full flex justify-between items-center py-3 lg:px-[12vw] px-[5vw]">
+        <div className="w-12 h-12 rounded-full shadow-lg">
           <img src="" alt="" />
         </div>
         {/* NAVBAR DESKTOP */}
