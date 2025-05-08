@@ -44,12 +44,14 @@ const Footer = () => {
   };
 
   return (
-    <main className="bg-[#004BA0] mt-10 max-md:px-6 px-28 py-9 w-full max-md:flex-col flex justify-between max-md:gap-8">
+    <main className="bg-[#004BA0] mt-6 max-md:px-6 px-28 py-9 w-full max-md:flex-col flex justify-between max-md:gap-8">
       {/* INFO */}
       <section className="flex flex-col gap-6 max-md:w-full">
         {/* CONNECT */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-slate-50 font-semibold">Vamos nos conectar</h1>
+          <h1 className="text-slate-50 font-semibold inter-regular">
+            Vamos nos conectar
+          </h1>
           {/* ICONS */}
           {IconsConnect.map((item, index) => (
             <div key={index} className="flex items-center gap-3">
@@ -63,7 +65,7 @@ const Footer = () => {
 
         {/* SOCIAL MEDIA */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-slate-50 font-semibold">
+          <h1 className="text-slate-50 font-semibold inter-regular">
             Acompanhe o meu trabalho
           </h1>
           {/* ICONS */}
@@ -86,7 +88,7 @@ const Footer = () => {
 
       {/* FORMULARIO EMAIL CONTATO */}
       <section className="flex flex-col gap-2 max-md:w-full w-2/4">
-        <h1 className="text-slate-50 font-semibold text-pretty max-md:text-justify">
+        <h1 className="text-slate-50 font-semibold text-pretty max-md:text-justify inter-regular">
           Possui um problema, tem uma ideia para ser desenvolvida, envia uma
           mensagem para o meu email. Vamos construir algo juntos!!
         </h1>
@@ -120,7 +122,7 @@ const Footer = () => {
           />
           <div className="w-full flex justify-end">
             <Button
-              className="max-sm:w-full text-slate-50 border border-slate-50 bg-transparent hover:bg-blue-950"
+              className="max-sm:w-full text-slate-50 border border-slate-50 bg-transparent hover:bg-blue-800 inter-regular"
               size={"lg"}
               type="submit"
             >

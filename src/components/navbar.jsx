@@ -7,6 +7,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import { Link } from "react-router-dom";
+
+const links = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "Projetos",
+    route: "/",
+  },
+  {
+    name: "Sobre",
+    route: "/about",
+  },
+  {
+    name: "Dicas",
+    route: "/",
+  },
+  {
+    name: "Contato",
+    route: "/",
+  },
+];
+
 function Navbar() {
   return (
     <main>
@@ -16,10 +41,11 @@ function Navbar() {
         </div>
         {/* NAVBAR DESKTOP */}
         <section className="flex gap-4 max-md:hidden">
-          <a href="">Projetos</a>
-          <a href="">Sobre</a>
-          <a href="">Configurações</a>
-          <a href="">Contato</a>
+          {links.map((item, index) => (
+            <Link className="lato-semibold" key={index} to={item.route}>
+              {item.name}
+            </Link>
+          ))}
         </section>
         {/* MENU MOBILE */}
         <Sheet>
@@ -41,13 +67,14 @@ function Navbar() {
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
+              <SheetTitle className="inter-regular">Menu</SheetTitle>
               <SheetDescription></SheetDescription>
               <section className="flex flex-col gap-5">
-                <a href="">Projetos</a>
-                <a href="">Sobre</a>
-                <a href="">Configurações</a>
-                <a href="">Contato</a>
+                {links.map((item, index) => (
+                  <Link className="lato-regular" key={index} to={item.route}>
+                    {item.name}
+                  </Link>
+                ))}
               </section>
             </SheetHeader>
           </SheetContent>

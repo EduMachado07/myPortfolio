@@ -9,7 +9,8 @@ export const Projects = [
     about:
       "Um site de gestão financeira desenvolvido para pessoas comuns que desejam ter mais controle sobre suas finanças. Oferece uma plataforma acessível e intuitiva para gerenciar suas transações financeiras, que se destaca por ser leve, simples e moderno. Meu objetivo é facilitar o controle financeiro pessoal e, além disso, conscientizar os usuários sobre a importância da gestão e do planejamento do dinheiro para as suas vidas.",
     type: "Front End",
-    link: "",
+    linkPage: "",
+    linkProject: "https://fin-x-three.vercel.app/",
   },
   {
     img: img_AuthSystem,
@@ -17,6 +18,7 @@ export const Projects = [
     title: "Auth System",
     about: "Sistema de autenticação de usuário",
     type: "Full Stack",
-    link: "",
+    linkPage: "",
+    linkProject: "https://github.com/EduMachado07/authSystem_client",
   },
 ];
