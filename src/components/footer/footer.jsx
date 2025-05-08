@@ -10,11 +10,11 @@ import { IconsConnect, SocialMedia } from "./store";
 const Footer = () => {
   const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-  if (!ACCESS_KEY) {
-    throw new Error(
-      "Chave de acesso não está definida nas variáveis de ambiente."
-    );
-  }
+  // if (!ACCESS_KEY) {
+  //   throw new Error(
+  //     "Chave de acesso não está definida nas variáveis de ambiente."
+  //   );
+  // }
 
   const formRef = useRef(null);
 
@@ -49,7 +49,7 @@ const Footer = () => {
       <section className="flex flex-col gap-6 max-md:w-full">
         {/* CONNECT */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-slate-50 font-semibold inter-regular">
+          <h1 className="text-slate-50 font-semibold lato-semibold">
             Vamos nos conectar
           </h1>
           {/* ICONS */}
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* SOCIAL MEDIA */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-slate-50 font-semibold inter-regular">
+          <h1 className="text-slate-50 font-semibold lato-semibold">
             Acompanhe o meu trabalho
           </h1>
           {/* ICONS */}
@@ -88,7 +88,7 @@ const Footer = () => {
 
       {/* FORMULARIO EMAIL CONTATO */}
       <section className="flex flex-col gap-2 max-md:w-full w-2/4">
-        <h1 className="text-slate-50 font-semibold text-pretty max-md:text-justify inter-regular">
+        <h1 className="text-slate-50 text-pretty max-md:text-justify lato-semibold">
           Possui um problema, tem uma ideia para ser desenvolvida, envia uma
           mensagem para o meu email. Vamos construir algo juntos!!
         </h1>
@@ -122,7 +122,7 @@ const Footer = () => {
           />
           <div className="w-full flex justify-end">
             <Button
-              className="max-sm:w-full text-slate-50 border border-slate-50 bg-transparent hover:bg-blue-800 inter-regular"
+              className="cursor-pointer hover:bg-[#0077ff] max-sm:w-full text-slate-50 border border-slate-50 bg-transparent lato-semibold"
               size={"lg"}
               type="submit"
             >

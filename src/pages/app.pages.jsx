@@ -7,24 +7,77 @@ import { Projects } from "@/store/projects.store";
 import { Link } from "react-router-dom";
 import BtnRedirect from "@/components/btnRedirect";
 
+const AboutMe = [
+  // {
+  //   name: "Tecnologias",
+  //   value: "TypeScript, React, Tailwindcss, Node, Express",
+  // },
+  {
+    name: "Formação",
+    value: "Técnico",
+  },
+  {
+    name: "Comida",
+    value: "Pizza",
+  },
+  {
+    name: "Cidade",
+    value: "São José dos Campos - SP",
+  },
+];
+
+const Title = ({ font, title }) => {
+  return (
+    <h1
+      className={`inter-extrabold ${font} text-pretty bg-gradient-to-l from-[#4da6ff] via-[#0077ff] to-[#005fcc] bg-clip-text text-transparent`}
+    >
+      {title}
+    </h1>
+  );
+};
+
 function App() {
   return (
     <>
       {/* INTRODUCTION */}
       <section className="bg-card-light rounded-lg shadow-md flex max-sm:flex-col overflow-hidden">
         {/* img */}
-        <div className="w-full sm:w-1/3 h-100 md:h-120">
+        <div className="w-full sm:w-[400px] sm:h-150 overflow-hidden">
           <img src={imgPerfil} alt="" className="w-full h-full object-cover" />
         </div>
         <main className="flex-1 px-10 py-14 max-md:p-4 flex flex-col justify-between">
-          <section className="flex flex-col gap-2.5">
-            <p className="text-sm inter-regular">
+          <section className="flex flex-col gap-3">
+            <p className="text-sm lato-semibold">
               Olá, meu nome é Eduardo Machado!
             </p>
-            <h1 className="inter-extrabold text-xl text-pretty bg-gradient-to-l from-[#4da6ff] via-[#0077ff] to-[#005fcc] bg-clip-text text-transparent">
-              Desenvolvedor Full Stack Apaixonado Pela Tecnologia
-            </h1>
-            <p className="text-lg lato-regular">Sou um desenvol</p>
+            <Title
+              font={"text-2xl"}
+              title={"Desenvolvedor Full Stack Apaixonado Pela Tecnologia"}
+            />
+            <p className="text-lg inter-regular text-justify">
+              Tenho 18 anos e sou um Desenvolvedor Full Stack apaixonado por
+              tecnologia e pelo seu impacto na vida das pessoas. Gosto de criar
+              projetos com foco em experiências de usuário dinâmicas, com
+              interfaces limpas, modernas e funcionais. Desde o primeiro contato
+              com o JavaScript, me encantei pela linguagem e venho explorando
+              cada vez mais seu potencial no desenvolvimento de soluções.
+            </p>
+            <p className="text-lg inter-regular text-justify max-sm:hidden">
+              Atualmente, estou em busca da minha primeira oportunidade
+              profissional na área, onde eu possa aplicar meus conhecimentos,
+              aprender com novos desafios e contribuir com projetos de impacto.
+            </p>
+
+            <hr className="my-0.5 border-[#1a1a1a]" />
+
+            <section className="flex flex-wrap gap-5 px-2">
+              {AboutMe.map((item, index) => (
+                <div key={index} className="w-[calc(33%-14px)] max-sm:w-full">
+                  <Title font={"base"} title={item.name} />
+                  <p className="text-base">{item.value}</p>
+                </div>
+              ))}
+            </section>
           </section>
           <div className="flex justify-end">
             <BtnRedirect link="/" content="Saber Mais" />
@@ -33,19 +86,16 @@ function App() {
       </section>
 
       {/* PROJECTS */}
-      <section className="flex flex-col gap-5 ">
-        <div>
-          <h1 className="capitalize text-primary text-xl inter-regular text-pretty">
-            Meus Projetos
-          </h1>
-          <hr className="h-1 w-18 bg-primary rounded-md" />
-        </div>
+      <section className="flex flex-col gap-5">
+        <h1 className="capitalize text-primary text-xl lato-semibold text-pretty -mb-1">
+          Meus Projetos
+        </h1>
         {/* list projects */}
-        <main className="flex flex-wrap gap-6">
+        <main className="flex flex-wrap gap-7">
           {Projects.slice(0, 2).map((item, index) => (
             <section
               key={index}
-              className="bg-card-light rounded-lg shadow-md md:w-[calc(50%-12px)] overflow-hidden"
+              className="bg-card-light rounded-lg shadow-md md:w-[calc(50%-14px)] overflow-hidden"
             >
               {/* img project */}
               <div className="w-full md:h-65 relative group overflow-hidden">
@@ -86,12 +136,12 @@ function App() {
                   {item.title}
                 </h1>
                 {/* about */}
-                <p className="text-base lato-regular line-clamp-3">
+                <p className="text-base inter-regular line-clamp-3">
                   {item.about}
                 </p>
                 {/* type project | page link */}
                 <div className="w-full flex items-center justify-between mt-1.5">
-                  <p className="py-0.5 px-2 bg-zinc-300/60 rounded-sm inter-regular">
+                  <p className="text-base py-0.5 px-2 bg-zinc-300/60 rounded-sm lato-semibold">
                     {item.type}
                   </p>
                   <BtnRedirect link="/" content="Saber Mais" />

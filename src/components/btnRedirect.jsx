@@ -4,7 +4,7 @@ const BtnRedirect = ({ link, content }) => {
   return (
     <Link
       to={link}
-      className="group flex items-center justify-center gap-2 inter-regular"
+      className="group flex items-center justify-center gap-2 lato-semibold"
     >
       {content}
       <svg

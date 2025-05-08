@@ -26,7 +26,7 @@ const IconsConnect = [
         href="https://www.google.com/maps/place/São+José+dos+Campos,+SP"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 lato-regular"
+        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 inter-regular"
       >
         São José dos Campos,
         <br /> <span className="font-bold">São Paulo - Brasil</span>
@@ -53,7 +53,7 @@ const IconsConnect = [
     text: (
       <a
         href="mailto:eduardo.silvamachado07@gmail.com"
-        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 lato-regular"
+        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 inter-regular"
       >
         eduardo.silvamachado07@gmail.com
       </a>
@@ -81,7 +81,7 @@ const IconsConnect = [
         href="https://wa.me/5512992133716"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 lato-regular"
+        className="text-slate-50 text-base font-normal hover:underline underline-offset-2 inter-regular"
       >
         +55 (12) 99213-3716
       </a>

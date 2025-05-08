@@ -5,6 +5,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 import { Link } from "react-router-dom";
@@ -35,14 +36,18 @@ const links = [
 function Navbar() {
   return (
     <main>
-      <section className="w-full flex justify-between items-center py-3 lg:px-[12vw] px-[5vw]">
+      <section className="w-full flex justify-between items-center py-3 lg:px-[16vw] px-[5vw]">
         <div className="w-12 h-12 rounded-full shadow-lg">
           <img src="" alt="" />
         </div>
         {/* NAVBAR DESKTOP */}
         <section className="flex gap-4 max-md:hidden">
           {links.map((item, index) => (
-            <Link className="lato-semibold" key={index} to={item.route}>
+            <Link
+              className="lato-semibold text-[#6b6b6b] transition-transform duration-300 hover:text-[#1a1a1a]"
+              key={index}
+              to={item.route}
+            >
               {item.name}
             </Link>
           ))}
@@ -71,9 +76,11 @@ function Navbar() {
               <SheetDescription></SheetDescription>
               <section className="flex flex-col gap-5">
                 {links.map((item, index) => (
-                  <Link className="lato-regular" key={index} to={item.route}>
-                    {item.name}
-                  </Link>
+                  <SheetClose asChild key={index}>
+                    <Link className="lato-regular" to={item.route}>
+                      {item.name}
+                    </Link>
+                  </SheetClose>
                 ))}
               </section>
             </SheetHeader>

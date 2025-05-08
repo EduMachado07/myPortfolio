@@ -8,7 +8,7 @@ function Index() {
     <main className="w-full bg-back-light flex flex-col gap-6">
       <Navbar />
       {/* PAGES */}
-      <main className="flex flex-col gap-10 px-[6vw] lg:px-[12vw]">
+      <main className="flex flex-col gap-10 px-[6vw] lg:px-[16vw]">
         <Outlet />
       </main>
 
