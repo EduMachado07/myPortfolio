@@ -6,6 +6,7 @@ import { Projects } from "@/store/projects.store";
 
 import { Link } from "react-router-dom";
 import BtnRedirect from "@/components/btnRedirect";
+import Title from "@/components/title";
 
 const AboutMe = [
   // {
@@ -26,16 +27,6 @@ const AboutMe = [
   },
 ];
 
-const Title = ({ font, title }) => {
-  return (
-    <h1
-      className={`inter-extrabold ${font} text-pretty bg-gradient-to-l from-[#4da6ff] via-[#0077ff] to-[#005fcc] bg-clip-text text-transparent`}
-    >
-      {title}
-    </h1>
-  );
-};
-
 function App() {
   return (
     <>
@@ -47,8 +38,8 @@ function App() {
         </div>
         <main className="flex-1 px-10 py-14 max-md:p-4 flex flex-col justify-between">
           <section className="flex flex-col gap-3">
-            <p className="text-sm lato-semibold">
-              Olá, meu nome é Eduardo Machado!
+            <p className="text-base lato-semibold">
+              Olá, meu nome é Eduardo Machado !
             </p>
             <Title
               font={"text-2xl"}
@@ -73,8 +64,10 @@ function App() {
             <section className="flex flex-wrap gap-5 px-2">
               {AboutMe.map((item, index) => (
                 <div key={index} className="w-[calc(33%-14px)] max-sm:w-full">
-                  <Title font={"base"} title={item.name} />
-                  <p className="text-base">{item.value}</p>
+                  <Title font={"text-sm"} title={item.name} />
+                  <p className="text-base inter-regular text-nowrap">
+                    {item.value}
+                  </p>
                 </div>
               ))}
             </section>
